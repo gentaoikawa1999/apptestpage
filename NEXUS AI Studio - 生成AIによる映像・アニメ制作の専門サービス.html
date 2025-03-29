@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/ -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS AI Studio - 生成AIによる映像・アニメ制作の専門サービス</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./NEXUS AI Studio - 生成AIによる映像・アニメ制作の専門サービス_files/css2" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3B82F6;
+            --primary-dark: #1D4ED8;
+            --primary-light: #DBEAFE;
+            --dark-color: #111827;
+            --light-color: #F9FAFB;
+            --gray-color: #6B7280;
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            --border-radius: 12px;
+            --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ヘッダー */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            margin-left: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* ヒーローセクション */
+        .hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #F9FAFB 0%, #EFF6FF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .hero-text {
+            width: 50%;
+        }
+        
+        .hero-image {
+            width: 45%;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            color: var(--gray-color);
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* サービス導入の流れ */
+        .process {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--gray-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .process-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .process-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            flex: 1;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .process-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .process-icon i {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .process-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .process-card p {
+            color: var(--gray-color);
+        }
+        
+        /* 選ばれる理由 */
+        .why-us {
+            padding: 100px 0;
+            background-color: #F3F4F6;
+        }
+        
+        .why-us-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .why-us-image {
+            width: 45%;
+        }
+        
+        .why-us-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .why-us-text {
+            width: 50%;
+        }
+        
+        .why-us-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+        }
+        
+        .why-us-list {
+            list-style: none;
+        }
+        
+        .why-us-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .why-us-list li i {
+            color: var(--success-color);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .why-us-list li div h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .why-us-list li div p {
+            color: var(--gray-color);
+        }
+        
+        /* サービス提供プラン */
+        .services {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .service-image {
+            height: 200px;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .service-content p {
+            color: var(--gray-color);
+            margin-bottom: 20px;
+        }
+        
+        /* お客様の声 */
+        .testimonials {
+            padding: 100px 0;
+            background-color: #F3F4F6;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .testimonial-rating {
+            color: var(--warning-color);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-text {
+            color: var(--dark-color);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .testimonial-author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-author-info h4 {
+            font-size: 1.1rem;
+            color: var(--dark-color);
+        }
+        
+        .testimonial-author-info p {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        
+        /* よくある質問 */
+        .faq {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #E5E7EB;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .faq-answer {
+            color: var(--gray-color);
+            display: none;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* 最終コールトゥアクション */
+        .cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .cta .btn {
+            background-color: white;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            padding: 12px 30px;
+        }
+        
+        .cta .btn:hover {
+            background-color: var(--light-color);
+        }
+        
+        /* グループ企業セクション */
+        .group-companies {
+            padding: 60px 0;
+            background-color: #F9FAFB;
+            text-align: center;
+        }
+
+        .group-companies h3 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+        }
+
+        .company-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .company-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .company-logo:hover {
+            transform: translateY(-5px);
+        }
+
+        .company-logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .company-logo span {
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+        
+        /* フッター */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-block;
+            color: white;
+        }
+        
+        .footer-about p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* レスポンシブデザイン */
+        @media (max-width: 992px) {
+            .hero-content,
+            .why-us-content {
+                flex-direction: column;
+            }
+            
+            .hero-text,
+            .hero-image,
+            .why-us-text,
+            .why-us-image {
+                width: 100%;
+            }
+            
+            .hero-text,
+            .why-us-image {
+                margin-bottom: 40px;
+            }
+            
+            .process-cards {
+                flex-direction: column;
+            }
+            
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* アニメーション効果 */
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* 映像・アニメ制作関連の追加スタイル */
+        .video-preview {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .video-preview::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; /* 16:9のアスペクト比 */
+        }
+
+        .video-preview img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background-color: rgba(59, 130, 246, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .play-button:hover {
+            background-color: var(--primary-color);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .play-button::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid white;
+            margin-left: 5px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-light);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -12px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+        }
+
+        .timeline-item.right::after {
+            left: -12px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .timeline-content p {
+            color: var(--gray-color);
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item.right {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 19px;
+                right: auto;
+            }
+            
+            .timeline-item.right::after {
+                left: 19px;
+            }
+        }
+
+        /* 技術スタック表示 */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+
+        .tech-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tech-item img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .tech-item span {
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container header-container">
+            <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#" class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#111827"></rect>
+                    <path d="M10 20L15 25L30 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <span>NEXUS AI Studio</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#process">サービス導入の流れ</a></li>
+                <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#why-us">選ばれる理由</a></li>
+                <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#services">サービス内容</a></li>
+                <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#testimonials">お客様の声</a></li>
+                <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#faq">よくある質問</a></li>
+            </ul>
+            <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#cta" class="btn">無料相談する</a>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>AIから生まれる革新、<br>クリエイティブとビジネスを次のステージへ</h1>
+                <p>戦略から表現までトータルで伴走する、新時代の映像・アニメ制作パートナー。従来の10分の1の人員・期間・コストで高品質なコンテンツを制作します。</p>
+                <div class="hero-buttons">
+                    <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#cta" class="btn">気軽に無料相談</a>
+                    <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#services" class="btn btn-outline">事例を見る</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="video-preview animate-float">
+                    <img src="./NEXUS AI Studio - 生成AIによる映像・アニメ制作の専門サービス_files/photo-1616469829941-c7200edec809" alt="AI映像制作のプレビュー" onerror="this.src=&#39;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18e3c8c7f4f%20text%20%7B%20fill%3A%23DBEAFE%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18e3c8c7f4f%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23EFF6FF%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285%22%20y%3D%22217.7%22%3EAI映像制作%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&#39;;">
+                    <div class="play-button"></div>
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2 17L12 22L22 17" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2 12L12 17L22 12" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <span>OpenAI Sora</span>
+                    </div>
+                    <div class="tech-item">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 6V8C15 9.10457 14.1046 10 13 10H11C9.89543 10 9 10.8954 9 12V18C9 19.1046 9.89543 20 11 20H13C14.1046 20 15 19.1046 15 18V16" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M9 4V6C9 7.10457 9.89543 8 11 8H13C14.1046 8 15 7.10457 15 6V4" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <span>Stable Diffusion</span>
+                    </div>
+                    <div class="tech-item">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606C19.3448 16.285 19.4995 16.5843 19.73 16.82L19.79 16.88C19.976 17.0657 20.1235 17.2863 20.2241 17.5291C20.3248 17.7719 20.3766 18.0322 20.3766 18.295C20.3766 18.5578 20.3248 18.8181 20.2241 19.0609C20.1235 19.3037 19.976 19.5243 19.79 19.71C19.6043 19.896 19.3837 20.0435 19.1409 20.1441C18.8981 20.2448 18.6378 20.2966 18.375 20.2966C18.1122 20.2966 17.8519 20.2448 17.6091 20.1441C17.3663 20.0435 17.1457 19.896 16.96 19.71L16.9 19.65C16.6643 19.4195 16.365 19.2648 16.0406 19.206C15.7162 19.1472 15.3816 19.1869 15.08 19.32C14.7842 19.4468 14.532 19.6572 14.3543 19.9255C14.1766 20.1938 14.0813 20.5082 14.08 20.83V21C14.08 21.5304 13.8693 22.0391 13.4942 22.4142C13.1191 22.7893 12.6104 23 12.08 23C11.5496 23 11.0409 22.7893 10.6658 22.4142C10.2907 22.0391 10.08 21.5304 10.08 21V20.91C10.0723 20.579 9.96512 20.258 9.77251 19.9887C9.5799 19.7194 9.31074 19.5143 9 19.4C8.69838 19.2669 8.36381 19.2272 8.03941 19.286C7.71502 19.3448 7.41568 19.4995 7.18 19.73L7.12 19.79C6.93425 19.976 6.71368 20.1235 6.47088 20.2241C6.22808 20.3248 5.96783 20.3766 5.705 20.3766C5.44217 20.3766 5.18192 20.3248 4.93912 20.2241C4.69632 20.1235 4.47575 19.976 4.29 19.79C4.10405 19.6043 3.95653 19.3837 3.85588 19.1409C3.75523 18.8981 3.70343 18.6378 3.70343 18.375C3.70343 18.1122 3.75523 17.8519 3.85588 17.6091C3.95653 17.3663 4.10405 17.1457 4.29 16.96L4.35 16.9C4.58054 16.6643 4.73519 16.365 4.794 16.0406C4.85282 15.7162 4.81312 15.3816 4.68 15.08C4.55324 14.7842 4.34276 14.532 4.07447 14.3543C3.80618 14.1766 3.49179 14.0813 3.17 14.08H3C2.46957 14.08 1.96086 13.8693 1.58579 13.4942C1.21071 13.1191 1 12.6104 1 12.08C1 11.5496 1.21071 11.0409 1.58579 10.6658C1.96086 10.2907 2.46957 10.08 3 10.08H3.09C3.42099 10.0723 3.742 9.96512 4.0113 9.77251C4.28059 9.5799 4.48572 9.31074 4.6 9C4.73312 8.69838 4.77282 8.36381 4.714 8.03941C4.65519 7.71502 4.50054 7.41568 4.27 7.18L4.21 7.12C4.02405 6.93425 3.87653 6.71368 3.77588 6.47088C3.67523 6.22808 3.62343 5.96783 3.62343 5.705C3.62343 5.44217 3.67523 5.18192 3.77588 4.93912C3.87653 4.69632 4.02405 4.47575 4.21 4.29C4.39575 4.10405 4.61632 3.95653 4.85912 3.85588C5.10192 3.75523 5.36217 3.70343 5.625 3.70343C5.88783 3.70343 6.14808 3.75523 6.39088 3.85588C6.63368 3.95653 6.85425 4.10405 7.04 4.29L7.1 4.35C7.33568 4.58054 7.63502 4.73519 7.95941 4.794C8.28381 4.85282 8.61838 4.81312 8.92 4.68H9C9.29577 4.55324 9.54802 4.34276 9.72569 4.07447C9.90337 3.80618 9.99872 3.49179 10 3.17V3C10 2.46957 10.2107 1.96086 10.5858 1.58579C10.9609 1.21071 11.4696 1 12 1C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V3.09C14.0013 3.41179 14.0966 3.72618 14.2743 3.99447C14.452 4.26276 14.7042 4.47324 15 4.6C15.3016 4.73312 15.6362 4.77282 15.9606 4.714C16.285 4.65519 16.5843 4.50054 16.82 4.27L16.88 4.21C17.0657 4.02405 17.2863 3.87653 17.5291 3.77588C17.7719 3.67523 18.0322 3.62343 18.295 3.62343C18.5578 3.62343 18.8181 3.67523 19.0609 3.77588C19.3037 3.87653 19.5243 4.02405 19.71 4.21C19.896 4.39575 20.0435 4.61632 20.1441 4.85912C20.2448 5.10192 20.2966 5.36217 20.2966 5.625C20.2966 5.88783 20.2448 6.14808 20.1441 6.39088C20.0435 6.63368 19.896 6.85425 19.71 7.04L19.65 7.1C19.4195 7.33568 19.2648 7.63502 19.206 7.95941C19.1472 8.28381 19.1869 8.61838 19.32 8.92V9C19.4468 9.29577 19.6572 9.54802 19.9255 9.72569C20.1938 9.90337 20.5082 9.99872 20.83 10H21C21.5304 10 22.0391 10.2107 22.4142 10.5858C22.7893 10.9609 23 11.4696 23 12C23 12.5304 22.7893 13.0391 22.4142 13.4142C22.0391 13.7893 21.5304 14 21 14H20.91C20.5882 14.0013 20.2738 14.0966 20.0055 14.2743C19.7372 14.452 19.5268 14.7042 19.4 15Z" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <span>Midjourney</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- サービス導入の流れ -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>サービス導入の流れ</h2>
+                <p>NEXUS AI Studioでは、お客様のニーズに合わせた最適なAI映像・アニメ制作サービスを提供します。導入から制作完了まで、シンプルな3ステップでスムーズに進行します。</p>
+            </div>
+            <div class="process-cards">
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h3>気軽にご相談</h3>
+                    <p>まずは無料相談で課題をお聞かせください。映像・アニメ制作のプロフェッショナルが、最適なソリューションをご提案します。</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2 17L12 22L22 17" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M2 12L12 17L22 12" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h3>AIを活用した企画提案</h3>
+                    <p>AIを起点に、最適なクリエイティブと制作戦略を提案。従来の10分の1のコスト・時間で高品質なコンテンツ制作を実現します。</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M22 4L12 14.01L9 11.01" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h3>プロジェクト実行</h3>
+                    <p>経験豊富なチームが企画から実行まで一貫してサポート。AIと人間のクリエイティビティを融合させた高品質なコンテンツを制作します。</p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>企画・脚本作成</h3>
+                        <p>生成AIを活用して、アイデアから企画・脚本を効率的に作成。従来の3分の1の時間で完成します。</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>キャラクター・背景デザイン</h3>
+                        <p>AIによる高品質なビジュアル生成と、プロのデザイナーによる調整で、独自性の高いデザインを実現します。</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>アニメーション・映像制作</h3>
+                        <p>最新のAI技術を活用し、高品質なアニメーション・映像を効率的に制作。人間のクリエイターが細部を調整します。</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>音声・音楽制作</h3>
+                        <p>AIによる音声合成と音楽生成で、高品質なオーディオコンテンツを短期間で制作します。</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>編集・仕上げ</h3>
+                        <p>プロの編集者による最終調整で、完成度の高いコンテンツに仕上げます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 選ばれる理由 -->
+    <section class="why-us" id="why-us">
+        <div class="container why-us-content">
+            <div class="why-us-image">
+                <img src="./NEXUS AI Studio - 生成AIによる映像・アニメ制作の専門サービス_files/photo-1522202176988-66273c2fd55f" alt="チームワーク" onerror="this.src=&#39;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18e3c8c7f4f%20text%20%7B%20fill%3A%23DBEAFE%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18e3c8c7f4f%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23EFF6FF%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285%22%20y%3D%22217.7%22%3Eチームワーク%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&#39;;">
+            </div>
+            <div class="why-us-text">
+                <h2>私たちが選ばれる理由</h2>
+                <ul class="why-us-list">
+                    <li>
+                        <i>✓</i>
+                        <div>
+                            <h3>日本のクリエイティブ強みとAI技術の融合</h3>
+                            <p>日本のアニメーション技術と最先端のAI技術を融合させ、独自性の高い高品質なコンテンツを制作します。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i>✓</i>
+                        <div>
+                            <h3>超効率的な制作プロセス</h3>
+                            <p>従来の10分の1の人員・期間・コストで高品質なコンテンツを制作。スピーディーな展開が可能です。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i>✓</i>
+                        <div>
+                            <h3>グローバルファースト設計</h3>
+                            <p>日本発のコンテンツを世界に展開するためのグローバル戦略を組み込んだ制作プロセスを提供します。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i>✓</i>
+                        <div>
+                            <h3>持続可能なクリエイティブエコシステム</h3>
+                            <p>AIと人間のクリエイターが共存する新しい制作モデルで、持続可能なクリエイティブエコシステムを構築します。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- サービス提供プラン -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>サービス内容</h2>
+                <p>NEXUS AI Studioは、生成AIを活用した映像・アニメ制作の専門サービスを提供しています。お客様のニーズに合わせた最適なソリューションをご提案します。</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./NEXUS AI Studio - 生成AIによる映像・アニメ制作の専門サービス_files/photo-1534972195531-d756b9bfa9f2" alt="NEXUS ANIME AI" onerror="this.src=&#39;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18e3c8c7f4f%20text%20%7B%20fill%3A%23DBEAFE%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18e3c8c7f4f%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23DBEAFE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285%22%20y%3D%22217.7%22%3ENEXUS ANIME AI%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&#39;;">
+                    </div>
+                    <div class="service-content">
+                        <h3>NEXUS ANIME AI</h3>
+                        <p>生成AIを活用したアニメーション制作サービス。企画・脚本からキャラクターデザイン、アニメーション制作まで、AIと人間のクリエイターが協働して高品質なアニメコンテンツを制作します。</p>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#cta" class="btn">詳細を見る</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./NEXUS AI Studio - 生成AIによる映像・アニメ制作の専門サービス_files/photo-1579548122080-c35fd6820ecb" alt="NEXUS FILM AI" onerror="this.src=&#39;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18e3c8c7f4f%20text%20%7B%20fill%3A%23DBEAFE%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18e3c8c7f4f%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23DBEAFE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285%22%20y%3D%22217.7%22%3ENEXUS FILM AI%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&#39;;">
+                    </div>
+                    <div class="service-content">
+                        <h3>NEXUS FILM AI</h3>
+                        <p>生成AIを活用した実写映像制作サービス。企画・脚本から撮影、編集まで、AIと人間のクリエイターが協働して高品質な映像コンテンツを制作します。OpenAI Soraなどの最新技術を活用しています。</p>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#cta" class="btn">詳細を見る</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="./NEXUS AI Studio - 生成AIによる映像・アニメ制作の専門サービス_files/photo-1531482615713-2afd69097998" alt="NEXUS CREATIVE AI ACADEMY" onerror="this.src=&#39;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18e3c8c7f4f%20text%20%7B%20fill%3A%23DBEAFE%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18e3c8c7f4f%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23DBEAFE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285%22%20y%3D%22217.7%22%3ENEXUS CREATIVE AI ACADEMY%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&#39;;">
+                    </div>
+                    <div class="service-content">
+                        <h3>NEXUS CREATIVE AI ACADEMY</h3>
+                        <p>クリエイター向けの生成AI活用トレーニングプログラム。映像・アニメ制作におけるAI活用方法を学び、次世代のクリエイターを育成します。オンラインコースとワークショップを提供しています。</p>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#cta" class="btn">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- グループ企業セクション -->
+    <section class="group-companies">
+        <div class="container">
+            <h3>グループ企業</h3>
+            <div class="company-logos">
+                <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#" class="company-logo">
+                    <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#111827"></rect>
+                        <path d="M10 20L15 25L30 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span>NEXUS AI Studio</span>
+                </a>
+                <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/index.html" class="company-logo">
+                    <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#6366F1"></rect>
+                        <path d="M20 10C14.477 10 10 14.477 10 20C10 25.523 14.477 30 20 30C25.523 30 30 25.523 30 20C30 14.477 25.523 10 20 10ZM20 28C15.582 28 12 24.418 12 20C12 15.582 15.582 12 20 12C24.418 12 28 15.582 28 20C28 24.418 24.418 28 20 28Z" fill="white"></path>
+                        <path d="M20 15C17.239 15 15 17.239 15 20C15 22.761 17.239 25 20 25C22.761 25 25 22.761 25 20C25 17.239 22.761 15 20 15ZM20 23C18.343 23 17 21.657 17 20C17 18.343 18.343 17 20 17C21.657 17 23 18.343 23 20C23 21.657 21.657 23 20 23Z" fill="white"></path>
+                        <circle cx="20" cy="20" r="2" fill="white"></circle>
+                    </svg>
+                    <span>ECHO AI Voice</span>
+                </a>
+                <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/regional-ai-partners/index.html" class="company-logo">
+                    <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#047857"></rect>
+                        <path d="M20 10C14.477 10 10 14.477 10 20C10 25.523 14.477 30 20 30C25.523 30 30 25.523 30 20C30 14.477 25.523 10 20 10ZM20 28C15.582 28 12 24.418 12 20C12 15.582 15.582 12 20 12C24.418 12 28 15.582 28 20C28 24.418 24.418 28 20 28Z" fill="white"></path>
+                        <path d="M20 15C17.239 15 15 17.239 15 20C15 22.761 17.239 25 20 25C22.761 25 25 22.761 25 20C25 17.239 22.761 15 20 15ZM20 23C18.343 23 17 21.657 17 20C17 18.343 18.343 17 20 17C21.657 17 23 18.343 23 20C23 21.657 21.657 23 20 23Z" fill="white"></path>
+                        <circle cx="20" cy="20" r="2" fill="white"></circle>
+                    </svg>
+                    <span>REGIONAL AI PARTNERS</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- お客様の声 -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>お客様の声</h2>
+                <p>NEXUS AI Studioのサービスをご利用いただいたお客様からの声をご紹介します。</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">「AIを活用した提案のおかげで、制作期間が大幅に短縮され、コストも抑えられました。クオリティも高く、大満足です。」</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image">
+                            <img src="./NEXUS AI Studio - 生成AIによる映像・アニメ制作の専門サービス_files/32.jpg" alt="佐藤様" onerror="this.src=&#39;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18e3c8c7f4f%20text%20%7B%20fill%3A%23DBEAFE%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18e3c8c7f4f%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EFF6FF%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2235%22%20y%3D%2255%22%3E佐藤%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&#39;;">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>佐藤様</h4>
+                            <p>映像制作会社 代表</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">「クリエイティブも戦略も高品質で大満足です。特にグローバル展開を見据えた提案が素晴らしかったです。」</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image">
+                            <img src="./NEXUS AI Studio - 生成AIによる映像・アニメ制作の専門サービス_files/44.jpg" alt="田中様" onerror="this.src=&#39;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18e3c8c7f4f%20text%20%7B%20fill%3A%23DBEAFE%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18e3c8c7f4f%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EFF6FF%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2235%22%20y%3D%2255%22%3E田中%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&#39;;">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>田中様</h4>
+                            <p>アニメ制作会社 プロデューサー</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">「柔軟な対応で安心してプロジェクトを進められました。AIと人間のクリエイターの協働が素晴らしい結果を生み出しています。」</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image">
+                            <img src="./NEXUS AI Studio - 生成AIによる映像・アニメ制作の専門サービス_files/67.jpg" alt="鈴木様" onerror="this.src=&#39;data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18e3c8c7f4f%20text%20%7B%20fill%3A%23DBEAFE%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18e3c8c7f4f%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EFF6FF%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2235%22%20y%3D%2255%22%3E鈴木%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E&#39;;">
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h4>鈴木様</h4>
+                            <p>広告代理店 クリエイティブディレクター</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>よくある質問</h2>
+                <p>NEXUS AI Studioのサービスに関するよくある質問にお答えします。</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">初回相談は無料ですか？</div>
+                    <div class="faq-answer" style="display: none;">はい、気軽に無料でご相談いただけます。お客様のニーズをお聞きし、最適なソリューションをご提案します。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">小規模事業者やベンチャーでも利用できますか？</div>
+                    <div class="faq-answer" style="display: none;">はい、中小企業・ベンチャーなど規模問わず対応可能です。予算や規模に合わせた最適なプランをご提案します。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">プロジェクト期間や費用はどのように決まりますか？</div>
+                    <div class="faq-answer" style="display: none;">ご要望や課題をヒアリングした上で最適なプランをご提案します。一般的に、従来の制作方法と比較して約10分の1の期間・コストでの制作が可能です。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">AIを使うとクオリティは下がりませんか？</div>
+                    <div class="faq-answer" style="display: none;">いいえ、AIはツールとして活用し、人間のクリエイターが細部を調整することで、高品質なコンテンツを制作します。むしろ、AIの活用により、クリエイターがより創造的な作業に集中できるため、クオリティの向上が期待できます。</div>
+                </div>
+                <div class="faq-item active">
+                    <div class="faq-question">著作権や権利関係はどうなりますか？</div>
+                    <div class="faq-answer" style="display: block;">制作物の著作権は、契約内容に応じて調整可能です。基本的には、お客様に帰属する形で契約を締結します。AIを活用した制作物の権利関係については、事前に詳細な説明と契約を行います。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最終コールトゥアクション -->
+    <section class="cta" id="cta">
+        <div class="container">
+            <h2>あなたのビジネスもAIで次のステージへ。</h2>
+            <p>NEXUS AI Studioは、生成AIを活用した映像・アニメ制作の専門サービスを提供しています。従来の10分の1の人員・期間・コストで高品質なコンテンツを制作します。</p>
+            <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#" class="btn">無料で相談する</a>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#" class="footer-logo">NEXUS AI Studio</a>
+                    <p>NEXUS AI Studioは、日本のクリエイティブ魂と最先端AIの融合により、映像制作の未来を創造する企業です。従来の10分の1の人員・期間・コストで高品質なコンテンツを制作します。</p>
+                    <div class="social-links">
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#"><i>X</i></a>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#"><i>FB</i></a>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#"><i>IG</i></a>
+                        <a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#"><i>LI</i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>サービス</h3>
+                    <ul>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#services">NEXUS ANIME AI</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#services">NEXUS FILM AI</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#services">NEXUS CREATIVE AI ACADEMY</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>グループ企業</h3>
+                    <ul>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#">NEXUS AI Studio</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/echo-ai-voice/index.html">ECHO AI Voice</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/regional-ai-partners/index.html">REGIONAL AI PARTNERS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>サポート</h3>
+                    <ul>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#cta">お問い合わせ</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#faq">よくある質問</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#">プライバシーポリシー</a></li>
+                        <li><a href="https://8001-i2oy1oc55uqygh978uinc-11e8e720.manus.computer/#">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 NEXUS AI Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQのトグル機能
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                const isActive = item.classList.contains('active');
+                
+                // すべてのアイテムを閉じる
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                    faqItem.querySelector('.faq-answer').style.display = 'none';
+                });
+                
+                // クリックされたアイテムが閉じていた場合は開く
+                if (!isActive) {
+                    item.classList.add('active');
+                    item.querySelector('.faq-answer').style.display = 'block';
+                }
+            });
+        });
+        
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+</body></html>
